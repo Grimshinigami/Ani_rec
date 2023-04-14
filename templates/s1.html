@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" type="text/css" href = "{{url_for('static',filename='css/s1.css')}}" />
+</head>
+<body>
+    <div class="m1" id="d1">
+        
+        <form action="/" method="post" id="f1">
+            <input id="i1" class='inp1' type="text" name="nm">
+            <input id="b2" type="submit" onclick="newel(document.getElementById('i1').value)" style="display:none;">
+        </form>
+        
+
+        <!-- <button id="s2" onclick="tryer()">Submit</button> -->
+        <!-- <input id="i1" class='inp1' type="text"> -->
+        <!-- getapid(document.getElementById('i1').value) -->
+        <!-- <button id="b1" onclick="newel()">Submit</button> -->
+        <!-- <button id="b2" onclick="newel(document.getElementById('i1').value);" style="display:none;">Submit</button> -->
+        <br><br>
+        <p>This is: {{usr}}</p>
+        <!-- <img src="https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__480.jpg"> -->
+        <iframe class="ii" src="{{url_for('p',aa='a')}}"></iframe>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="{{url_for('static',filename='js/s2.js')}}"></script> -->
+    <script type="text/javascript" src="{{url_for('static',filename='js/s1.js')}}"></script>
+</body>
+</html>

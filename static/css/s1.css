@@ -1,0 +1,45 @@
+.m1{
+    background-color: white;
+    width: 93rem;
+    height: auto;
+    position: relative;
+    top: 5rem;
+    left: 1rem;
+    /* border: none; */
+    /* border: 10px; */
+    /* border-style: double; */
+    
+}
+.dclass{
+    position: relative;
+    display: inline-block;
+    margin: 2rem;
+    word-spacing: 5rem;
+}
+
+.inp1{
+    position: relative;
+    left: 25rem;
+    border: 2px;
+    border: dotted;
+    width: 40rem;
+    height: 40px;
+}
+
+.tclass{
+    display: block;
+    text-align: justify;
+    width: 180px;
+    word-spacing: normal;
+}
+.ii{
+    width: 93rem;
+    height: 20rem;
+    /* border: none; */
+}
+.d22{
+    background-color: black;
+    width: 92rem;
+    height: 19rem;
+    color: white;
+}
