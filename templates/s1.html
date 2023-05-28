@@ -7,27 +7,54 @@
     <title>Document</title>
     <link rel = "stylesheet" type="text/css" href = "{{url_for('static',filename='css/s1.css')}}" />
 </head>
-<body>
+<body style="background-color: #EDEDED;">
     <div class="m1" id="d1">
+        <form method="post" id="todo-form">
+        <input id="todo" class='inp1' type="text" name="todo" placeholder="Enter anime you like">
         
-        <form action="/" method="post" id="f1">
-            <input id="i1" class='inp1' type="text" name="nm">
-            <input id="b2" type="submit" onclick="newel(document.getElementById('i1').value)" style="display:none;">
+        <button type="submit" id="b2" style="display:none;">Submit</button>
+        
         </form>
-        
-
-        <!-- <button id="s2" onclick="tryer()">Submit</button> -->
-        <!-- <input id="i1" class='inp1' type="text"> -->
-        <!-- getapid(document.getElementById('i1').value) -->
-        <!-- <button id="b1" onclick="newel()">Submit</button> -->
-        <!-- <button id="b2" onclick="newel(document.getElementById('i1').value);" style="display:none;">Submit</button> -->
         <br><br>
-        <p>This is: {{usr}}</p>
-        <!-- <img src="https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__480.jpg"> -->
-        <iframe class="ii" src="{{url_for('p',aa='a')}}"></iframe>
+        
+      
+
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
-    <!-- <script type="text/javascript" src="{{url_for('static',filename='js/s2.js')}}"></script> -->
+    <p id="pp1" style="display: none;"></p>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+          <script>
+            // async function sett(){
+                
+            // }
+            // let temp={{inds}}
+            
+    </script>
     <script type="text/javascript" src="{{url_for('static',filename='js/s1.js')}}"></script>
+    <script type="text/javascript">
+        let temp=document.getElementById("pp1")
+        $(document).on('submit','#todo-form',async function(e)
+                       {
+          console.log('hello');
+          e.preventDefault();
+          // newel(document.getElementById('todo').value);
+          $.ajax({
+            type:'POST',
+            url:"/t",
+            data:{
+              todo:$("#todo").val()
+            },
+            success:function(response)
+            {
+              temp.innerHTML=response
+              newel(response)
+              console.log(typeof(response))
+              // alert('saved');
+            }
+          })
+        });
+        //   newel(document.getElementById('todo').value);
+      </script>
 </body>
 </html>

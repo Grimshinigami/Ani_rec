@@ -1,5 +1,5 @@
 .m1{
-    background-color: white;
+    background-color: #EDEDED;
     width: 93rem;
     height: auto;
     position: relative;
@@ -11,10 +11,15 @@
     
 }
 .dclass{
+    height: 302px;
     position: relative;
     display: inline-block;
     margin: 2rem;
-    word-spacing: 5rem;
+    /* border: 2rem; */
+    word-spacing: normal;
+    background-color: #EDEDED;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
 }
 
 .inp1{
@@ -29,8 +34,11 @@
 .tclass{
     display: block;
     text-align: justify;
+    height: 20px;
     width: 180px;
+    font-size:medium;
     word-spacing: normal;
+    overflow: auto;
 }
 .ii{
     width: 93rem;
